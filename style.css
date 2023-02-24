@@ -16,6 +16,7 @@ div#nav ul {
 div#nav ul li {
         display: inline-block;
         margin-top: 50px;
+        transition: 1s;
 }
 div#nav ul li a {
         text-decoration: none;
@@ -33,7 +34,13 @@ div#nav ul li a:hover {
 #nav {
         margin-top: 0px;
         height: 150px;
-        background-color: rgb(133, 108, 208);
+        background-color: rgb(101, 190, 64);
+        transition: 1s;
+}
+
+#nav:hover li{
+        padding: 5px;
+        transition: 1s;
 }
 
 .logo-img{
@@ -41,8 +48,4 @@ div#nav ul li a:hover {
         position: relative;
         margin-left: 30px;
         
-}
-
-.bg-div{
-        overflow: hidden;
 }
