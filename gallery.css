@@ -14,11 +14,18 @@ body {
   /* Position the image container (needed to position the left and right arrows) */
   .container {
     position: relative;
+    width: 100%;
   }
   
   /* Hide the images by default */
   .mySlides {
     display: none;
+  }
+
+  .mySlides img{
+    height: 480px;
+    overflow:hidden;
+    object-fit: cover;
   }
   
   /* Add a pointer when hovering over the thumbnail images */
