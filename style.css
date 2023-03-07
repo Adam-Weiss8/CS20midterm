@@ -20,7 +20,7 @@ div#nav ul li {
 }
 div#nav ul li a {
         text-decoration: none;
-        font-size: 30px;
+        font-size: 25px;
         color: rgb(0, 0, 0);
         transition: .7s;
         padding: 50px;
