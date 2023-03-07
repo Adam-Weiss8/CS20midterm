@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Order Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+	.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Add this property to center vertically */
+  height: 100vh; /* Add this property to make the container take up the entire viewport height */
+}
+
+.product-image {
+  width: 50%;
+  padding: 20px;
+}
+
+.order-form {
+  width: 50%;
+  padding: 20px;
+  max-width: 400px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.order-form h1 {
+  margin-top: 0;
+}
+
+.order-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.order-form label {
+  font-weight: bold;
+}
+
+.order-form input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+}
+
+.order-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-form button:hover {
+  background-color: #3e8e41;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image, .order-form {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+.product-details {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.product-details h2 {
+  margin-bottom: 5px;
+}
+
+.product-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.product-details p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+	</style>
+  </head>
+    <body>
+    <div class="container">
+      <div class="product-image">
+        <img src="images/quickcheckout.jpg" alt="Product Image" width="600" height="400">
+        <div class="product-details">
+          <h2>Lorax - Quick Chckout </h2>
+		  <h4>Price: In previous tab </h4>
+          <p>By supporting Lorax, you're helping make our planet cleaner and healthier. Thank you for your donation!</p>
+        </div>
+      </div>
+      <div class="order-form">
+  <h1>Product Order Form</h1>
+  <form id="order-form" method="post">
+    <div>
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" pattern="[A-Za-z]+" required>
+    </div>
+    <div>
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" pattern="[A-Za-z]+" required>
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+    </div>
+    <div>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+    </div>
+    <div>
+      <label for="credit-card">Credit Card Number:</label>
+      <input type="text" id="credit-card" name="credit-card" pattern="[0-9]{16}" required>
+    </div>
+    <div>
+      <label for="expiration-date">Expiration Date:</label>
+      <input type="month" id="expiration-date" name="expiration-date" required>
+    </div>
+    <div>
+      <label for="security-code">Security Code:</label>
+      <input type="text" id="security-code" name="security-code" pattern="[0-9]{3}" required>
+    </div>
+    <button type="submit">Place Order</button>
+  </form>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+	<script>
+  $(document).ready(function() {
+    $('#order-form').submit(function(e) {
+      e.preventDefault(); // prevent the form from submitting normally
+      // your form validation code goes here
+      // ...
+
+      // if the form is valid, show a success message
+      alert('Your order has been successfully placed!');
+      this.submit(); // submit the form
+    });
+  });
+</script>
+
+  </body>
+</html>
