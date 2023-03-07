@@ -25,19 +25,10 @@ h2 {
     text-align: center;
 }
 
-@media (max-width: 500px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .box {
-        flex-basis: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .box:last-child {
-        margin-bottom: 10px;
+@media screen and (max-width: 600px) {
+    div#nav ul li a {
+        font-size: 0px;
+        padding: 25px;
     }
 }
 
