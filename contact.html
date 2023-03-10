@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Contact Form</title>
+        <meta charset="utf-8">
+    </head>
+  <body>
+    <link rel="stylesheet" href="style.css">
+    <a href="home.html"><img class="logo-img" src="logo.png" width="150" height="150" ALT="align box" ALIGN=CENTER></a>
+      <div id="nav">  
+        <ul>
+          <li><a href="founders.html">Founders</a></li>
+            <li><a href="contact.html">Contact</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="mission.html">Mission</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    <link rel="stylesheet" type="text/css" href ="contact.css">
+    <div class="container">
+        <form name = "myForm" onsubmit="return validateForm();">
+    
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="email">e-mail</label>
+        <input type="text" id="email" name="e-mail" placeholder="your@email.com">
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+    
+        </form>
+  </div>
+
+
+  <div id="footer">
+    <p style="text-align: center; margin: 0px;">
+        <img id="footer_logo" src="logo.png" width="100" height="100">
+    </p>
+    <div>Copyright &copy; 2023 Lorax, Inc.</div>
+    <ul id="footer_links">
+        <li class="footer_link"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                target="_blank">Privacy Policy</a></li>
+        <li class="footer_link"><a href="">Mission statement</a></li>
+        <li class="footer_link"><a href="">Plant A Tree!</a></li>
+    </ul>
+  </div>
+</body>
+
+<script>
+    function validateForm() {
+        let warning = "";
+        let valid = true;
+
+        warnings = [];
+        var fname = document.forms["myForm"]["firstname"].value;
+        var lname = document.forms["myForm"]["lastname"].value;
+        var email = document.forms["myForm"]["e-mail"].value
+        var subject = document.forms["myForm"]["subject"].value
+        warnings.push(fname, lname, email, subject);
+        warnAlerts = ["First Name", "Last Name", "E-mail", "Subject"];
+        for (let i = 0; i < warnings.length; i++) {
+            if (warnings[i] == "") {
+                warning += "Please fill out the " + warnAlerts[i] + "\n";
+                valid = false;
+            }
+            if (warnAlerts[i] == "E-mail" && !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
+                warning += "Please fill out a correct e-mail\n";
+                valid = false;
+            }
+        }
+        
+        if (!valid) {
+            alert(warning);
+            return false;
+        }
+    }
+</script>
+</html>

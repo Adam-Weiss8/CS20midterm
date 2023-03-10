@@ -22,10 +22,11 @@ body {
     display: none;
   }
 
-  .mySlides img{
-    height: 480px;
-    overflow:hidden;
+  .croppedImg{
+    height: 50vw;
+    width: 100%;
     object-fit: cover;
+    object-position: 100% 20%;
   }
   
   /* Add a pointer when hovering over the thumbnail images */
@@ -89,6 +90,7 @@ body {
   .column {
     float: left;
     width: 16.66%;
+    height: 15%
   }
   
   /* Add a transparency effect for thumnbail images */

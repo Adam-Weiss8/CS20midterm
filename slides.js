@@ -22,18 +22,22 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
+    slides[slideIndex-1].style.display = "block";
+    
 }
 
 $(document).ready(function() {
-    createDiv();
+    // createDiv();
+    $("#fadeIn").click(function() {
+        console.log("tEXT");
+        plusSlides(-1);
+    });
 });
 
-function createDiv(){
-    /* get all files from the file gallery */
-    var fs = require('fs');
-    var files = fs.readdirSync('/slideshow_pics/');
-    console.log(files.length());
-}
+// function createDiv(){
+//     /* get all files from the file gallery */
+//     var fs = require('fs');
+//     var files = fs.readdirSync('/slideshow_pics/');
+// }
