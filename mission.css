@@ -1,5 +1,6 @@
 .container {
-    display: flex;
+    display: flex;  
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -11,26 +12,34 @@
 
 .box {
     flex: 1 1 20%;
-    margin-right: 10px;
+    margin: 0 auto 10px auto;
     padding: 20px;
     background-color: #eee;
-    border-radius: 10px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
 }
 
 .box:last-child {
-    margin-right: 0;
+    margin-bottom: 0;
 }
 
 h2 {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* @media screen and (max-width: 600px) {
     div#nav ul li a {
         font-size: 0px;
         padding: 25px;
     }
-}
+} */
 
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
