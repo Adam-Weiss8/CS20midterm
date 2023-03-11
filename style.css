@@ -1,10 +1,26 @@
 @media screen and (max-width: 600px) {
-        div#nav ul li a {
-                font-size: 0px;
-                padding: 25px;
+        div#nav ul {
+                margin-right: 20px !important;
         }
-      }
-      
+        
+        div#nav ul li {
+                margin-top: 35px !important;
+        }
+        div#nav ul li a {
+                
+                font-size: 10px !important;
+                padding: 20px !important;
+        }
+        
+        #nav {
+                height: 75px !important;
+        }
+
+        .logo-img {
+                width: 75px !important;
+                height: 75px !important;
+        }
+}
 * {
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important
 }
@@ -58,6 +74,16 @@ div#nav ul li a:hover {
         
 }
 
+
+@media screen and (max-width: 600px) {
+        #footer ul li a{
+                font-size: 10px !important;
+        }
+
+        #footer ul li {
+                padding-left: 40px !important;
+        }
+}
 
 #footer ul {
         list-style: none;
