@@ -5,8 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-	* {
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+@media screen and (max-width: 600px) {
+        div#nav ul {
+                margin-right: 20px !important;
+        }
+        
+        div#nav ul li {
+                margin-top: 35px !important;
+        }
+        div#nav ul li a {
+                
+                font-size: 10px !important;
+                padding: 20px !important;
+        }
+        
+        #nav {
+                height: 75px !important;
+        }
+
+        .logo-img {
+                width: 75px !important;
+                height: 75px !important;
+        }
+
+        #nav:hover li{
+                padding: 1px !important;
+                transition: 1s !important;
+        }
+}
+* {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important
 }
 
 body {
@@ -28,7 +56,7 @@ div#nav ul li {
 }
 div#nav ul li a {
         text-decoration: none;
-        font-size: 25px;
+        font-size: 30px;
         color: rgb(0, 0, 0);
         transition: .7s;
         padding: 50px;
@@ -58,6 +86,16 @@ div#nav ul li a:hover {
         
 }
 
+
+@media screen and (max-width: 600px) {
+        #footer ul li a{
+                font-size: 10px !important;
+        }
+
+        #footer ul li {
+                padding-left: 40px !important;
+        }
+}
 
 #footer ul {
         list-style: none;
@@ -211,8 +249,8 @@ div#nav ul li a:hover {
       <div class="product-image">
         <img src="images/quickcheckout.jpg" alt="Product Image" width="600" height="400">
         <div class="product-details">
-          <h1>Lorax - Quick Chckout </h1>
-		  <h2>Price: In previous tab </h2>
+          <h2>Lorax - Quick Chckout </h2>
+		  <h4>Price: In previous tab </h4>
           <p>By supporting Lorax, you're helping make our planet cleaner and healthier. Thank you for your donation!</p>
         </div>
       </div>
