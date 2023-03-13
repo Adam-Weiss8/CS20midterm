@@ -33,7 +33,6 @@ $(document).ready(function() {
         var slides = $(".mySlides");
         var stuff = $(".demo");
         var cap = $("#caption");
-        console.log(cap);
 
         if (slideIndex == 1) {
             slideIndex = slides.length - 1;
