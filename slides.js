@@ -1,5 +1,3 @@
-var allimages = ["slideshow_pics/arctic-hans-jurgen-mager.jpg","slideshow_pics/forest_irina_idriser.jpg", 
- "slideshow_pics/savanna_david_clode.jpg, slideshow_pics/david_clode_elephant.jpg, slideshow_pics/lucas_ludwig_tundra.jpg"]
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -19,43 +17,70 @@ function showSlides(n) {
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+        slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-    dots[slideIndex-1].className += " active";
+    dots[slideIndex-1].className += "active";
     captionText.innerHTML = dots[slideIndex-1].alt;
-    // slides[slideIndex-1].style.display = "block";
-    return slideIndex;
+    slides[slideIndex-1].style.display = "block";
 }
 
-$(document).ready(function() {
-    // createDiv();
+$(document).ready(function() {    
+    /* Use the back button to get the last image */
     $("#fadeIn").click(function() {
-        var index = plusSlides(-1);
-        var images = $(".croppedImg");
-        console.log(images);
+        var slides = $(".mySlides");
+        var stuff = $(".demo");
+        var cap = $("#caption");
+        console.log(cap);
 
-    //     images.each(function(index, img) {
-    //         if($(img).hasClass('active')) {
-    //           active = index;
-    //           next = (index === images.length - 1) ? 0 : index + 1;
-    //         }
-    //       });
-        
-    //       $(images[active]).fadeOut(1000, function() {
-    //         $(images[next]).fadeIn(1000);
-    //       });
-        
-    //       $(images[next]).addClass('active');
-    //       $(images[active]).removeClass('active');
-    // }, 3000);
-});
-});
+        if (slideIndex == 1) {
+            slideIndex = slides.length - 1;
+        }
+        else {
+            slideIndex--;
+        }
 
-// function createDiv(){
-//     /* get all files from the file gallery */
-//     var fs = require('fs');
-//     var files = fs.readdirSync('/slideshow_pics/');
-// }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        
+        for (i = 0; i < stuff.length; i++) {
+            stuff[i].className = stuff[i].className.replace(" active", "");
+        }
+
+        stuff[slideIndex].className += "  active";
+        cap[0].innerHTML = stuff[slideIndex].alt;
+        $(slides[slideIndex]).fadeIn(2000).css("display", "block");
+
+    });
+
+
+    /* Use the back button to get the last image */
+    $("#fadeOut").click(function() {
+        var slides = $(".mySlides");
+        var stuff = $(".demo");
+        var cap = $("#caption");
+
+        if (slideIndex == slides.length) {
+            slideIndex = 0;
+        }
+        else {
+            slideIndex++;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        
+        for (i = 0; i < stuff.length; i++) {
+            stuff[i].className = stuff[i].className.replace(" active", "");
+        }
+
+        stuff[slideIndex].className += "  active";
+        cap[0].innerHTML = stuff[slideIndex].alt;
+        $(slides[slideIndex]).fadeIn(2000).css("display", "block");
+
+    });
+});

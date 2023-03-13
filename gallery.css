@@ -71,6 +71,10 @@ body {
     position: absolute;
     top: 0;
   }
+
+  .active {
+    display: block;
+  }
   
   /* Container for image text */
   .caption-container {
