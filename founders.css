@@ -23,10 +23,20 @@ html {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
+    border-radius: 10px;
 }
 
 .container {
     padding: 0 16px;
+    overflow: hidden;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container p {
+    text-align: right;
 }
 
 .container::after,
@@ -40,26 +50,16 @@ html {
     color: grey;
 }
 
-.button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-}
-
-.button:hover {
-    background-color: #555;
-}
-
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 500px) {
     .column {
         width: 100%;
         display: block;
+    }
+} */
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 50%;
     }
 }
 
@@ -92,8 +92,8 @@ html {
     outline: 0;
     display: inline-block;
     padding: 8px;
-    color: white;
-    background-color: #000;
+    color: black;
+    background-color: forestgreen;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -104,14 +104,37 @@ html {
 }
 
 @media screen and (max-width: 600px) {
+    div#nav ul {
+        margin-right: 20px !important;
+    }
+
+    div#nav ul li {
+        margin-top: 35px !important;
+    }
+
     div#nav ul li a {
-        font-size: 0px;
-        padding: 25px;
+
+        font-size: 10px !important;
+        padding: 20px !important;
+    }
+
+    #nav {
+        height: 75px !important;
+    }
+
+    .logo-img {
+        width: 75px !important;
+        height: 75px !important;
+    }
+
+    #nav:hover li {
+        padding: 1px !important;
+        transition: 1s !important;
     }
 }
 
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important
 }
 
 body {
@@ -164,6 +187,16 @@ div#nav ul li a:hover {
 
 }
 
+
+@media screen and (max-width: 600px) {
+    #footer ul li a {
+        font-size: 10px !important;
+    }
+
+    #footer ul li {
+        padding-left: 40px !important;
+    }
+}
 
 #footer ul {
     list-style: none;
